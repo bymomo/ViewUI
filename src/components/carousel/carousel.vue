@@ -269,6 +269,7 @@
                 if (event === this.trigger && curIndex !== n) {
                     this.updateTrackIndex(n);
                     this.$emit('input', n);
+                    this.$emit('on-change', curIndex, this.currentIndex);
                     // Reset autoplay timer when trigger be activated
                     this.setAutoplay();
                 }
